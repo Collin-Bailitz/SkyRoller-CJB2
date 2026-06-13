@@ -43,7 +43,7 @@ This repository contains the project files and assets used throughout the lectur
 | Materials | Unity materials |
 | Scenes | Unity scenes |
 | Scripts | Gameplay scripts |
-| Sprites | Car, road, arrow, and target sprites |
+| Sprites | Kenney Sprites |
 
 ---
 
