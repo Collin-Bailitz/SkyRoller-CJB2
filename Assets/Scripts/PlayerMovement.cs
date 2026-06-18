@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     float sideVelocity;
 
     float originalForwardSpeed;
+
+    bool reverseControls;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,14 +42,29 @@ public class PlayerMovement : MonoBehaviour
         moveInput = value.Get<Vector2>();
     }
 
+    public void ActivateReverseControls(float duration)
+{
+    StartCoroutine(ReverseControlsRoutine(duration));
+}
+
+private IEnumerator ReverseControlsRoutine(float duration)
+{
+    reverseControls = true;
+    yield return new WaitForSeconds(duration);
+    reverseControls = false;
+}
+
     void FixedUpdate()
-    {
+    {   
+
+        float horizontalInput = reverseControls ? -moveInput.x : moveInput.x;
+
         currentSideInput = Mathf.SmoothDamp(
             currentSideInput,
-            moveInput.x,
+            horizontalInput,
             ref sideVelocity,
             0.1f
-        );
+            );
         
         Vector3 movement = new Vector3(
             currentSideInput * sideSpeed,
