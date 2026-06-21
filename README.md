@@ -1,6 +1,6 @@
 # Sky Roller 3D
 
-Sky Roller 3D game for the Module 5 built in Unity. Some of the additional hazards I implemented includes rocks that slow down the player, immovable crates, and mushrooms and flowers that invert the controls (my implementation also includes the spike trap and speed boost based off of the lectures).
+Sky Roller 3D game for the Module 5 built in Unity. Some of the additional hazards I implemented includes rocks that slow down the player, immovable crates, and mushrooms and flowers that invert the controls (my implementation also includes the spike trap and speed boost based off of the lectures). You can start the game through the menu scene, and it should switch between the MainMenu scene and the Game scene when you're playing the game. 
 
 ---
 
